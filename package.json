@@ -72,7 +72,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor myapp/bin/www"
+    "start": "supervisor myapp/bin/www",
+    "forever": "forever start -l forever.log -o out.log -e err.log myapp/bin/www"
   },
   "author": "liushaojie",
   "license": "ISC"
