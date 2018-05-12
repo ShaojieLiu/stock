@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='./gdsh', title='股东数') 股东数表格
+  span &nbsp;&nbsp;&nbsp;&nbsp;报告日期:&nbsp;
+  input(type='text', value="#{gdsh.reportDate}")

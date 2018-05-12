@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>股票之家</title>
+    </head>
+    <body>
+
+<!-- a(href='./gdsh', title='股东数') 股东数表格 -->
+<a href="./gdsh" id='gdsh-a'>股东数表格</a>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;报告日期:&nbsp;</span> 
+<input type="text" id='gdsh-reportDate'>
+<span>(例如: 2017-12-31)</span>
+<br>
+<a href="./ltgd" id='ltgd-a'>十大流通股东格式化</a>
+
+<script>
+const date = document.querySelector('#gdsh-reportDate')
+const a = document.querySelector('#gdsh-a')
+date.addEventListener('keyup', e => a.href=`./gdsh?reportdate=${e.target.value}`)
+
+</script>
+
+    </body>
+</html>

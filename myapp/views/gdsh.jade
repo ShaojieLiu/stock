@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  table
+    thead
+        each v, i in data[0]
+            td #{v}
+    tbody
+        each row, i in data.slice(1)
+            tr(class=(i % 2 == 0) ? 'odd' : 'even')
+                each v, i in row
+                    td #{v}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .ctn {
+                display: flex;
+                background-color: lightblue;
+                width: 100%;
+                height: 100%;
+            }
+            .child+.child {
+                margin-left: 10px;                              
+            }
+            .child {
+                flex: 1 0;
+                justify-content: space-around;
+                word-break: break-all;
+            }
+            #input {
+                background-color:bisque;                  
+            }
+            #output {
+                background-color:darkgray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>将未格式化的数据粘贴于左边区域, 即可在右边得到格式化后的数据</p>
+        <div class='ctn'>
+            <textarea class='child' id='input'></textarea>
+            <textarea class='child' id='output'></textarea>
+        </div>
+<script>
+const el = sel => document.querySelector(sel)
+
+const i = el('#input')
+const o = el('#output')
+
+i.addEventListener('input', ev => {
+    const v = i.value
+    const res = v.split(/ +/).join('\t')
+    o.value = res
+    console.log(res)
+})
+</script>
+    </body>
+</html>
